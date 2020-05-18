@@ -1,15 +1,28 @@
 <?php
-//print_r($_SERVER);
 
-$sBasePath = $_SERVER['CONTEXT_DOCUMENT_ROOT'];
-//echo "DIR:".__DIR__;
+require_once("../app/homeController.php");
+require_once("../app/profilController.php");
+require_once("../app/skillsController.php");
+require_once("../app/skillsCompetenceController.php");
+require_once("../app/skillsSavoirfaireController.php");
 
-require_once($sBasePath . "/app/homeController.php");
-require_once($sBasePath . "/app/profilController.php");
-require_once($sBasePath . "/app/skillsController.php");
-require_once($sBasePath . "/app/skillsCompetenceController.php");
-require_once($sBasePath . "/app/skillsSavoirfaireController.php");
+require_once("../app/profilModel.php");
 
+require_once("../app/homeView.php");
+require_once("../app/profilView.php");
+
+
+$aProfil = array();
+/*
+$aProfil["nom"] = "Toto";
+$aProfil["prenom"] = "tata";
+$aProfil["presentation"] = "I love PHP :)";
+$aProfil["email"] = "fabrice1618@gmail.com";
+
+readProfilModel();
+
+print_r($aProfil);
+*/
 
 
 if ( ! isset($_GET['url']) || empty($_GET['url']) ) {

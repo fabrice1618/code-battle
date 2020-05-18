@@ -3,5 +3,11 @@
 
 function runHomeController()
 {
-    echo "I am home";
+    global $aProfil;
+
+    readProfilModel();
+
+    homeView();
+
+
 }

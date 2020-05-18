@@ -2,5 +2,10 @@
 
 function runProfilController()
 {
-    echo "Le profil";
+    global $aProfil;
+
+    readProfilModel();
+
+    profilView();
+
 }
