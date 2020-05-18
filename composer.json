@@ -1,0 +1,17 @@
+{
+    "name": "33781/code-battle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TheFury-BOY",
+            "email": "dudeck-adrien@laposte.net"
+        }
+    ],
+    "autoload": {
+        "psr-4":{
+            "Router\\": "routes/",
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
