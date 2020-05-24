@@ -1,0 +1,233 @@
+    <div class="container">
+      <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="card-header">
+          <div class="row">
+            <h3 class="col-md-6">Compétences de Fabrice Guichard<br>1 - Frontend Maquetter une application</h3>
+            <ul class="nav nav-pills col-md-6">
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=0">profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Compétences:</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/membre?userid=0&competenceid=1">1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=2">2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=3">3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=4">4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=5">5</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=6">6</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=7">7</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=8">8</a>
+              </li>            
+            </ul>
+          </div>
+        </div>
+        <div class="card-body" style="margin-left: 1rem;">
+          <div class="row">
+            <div class="col">
+              <form action="/template/fabrice1618-competence.html?action=afteradd">
+
+                <fieldset class="border border-primary rounded" style="padding: 1rem;margin-bottom: 1rem;">
+                  <div class="form-row">
+                    <h3>Votre expérience à propos de :</h3><br>
+                  </div>
+                <div class="form-row">
+                  <p>Construire la maquette de l'application optimisée pour chacun des équipements ciblés, l’enchaînement et la composition des écrans, en français ou en anglais</p>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-2">
+                    <label for="inputExpDate">Date expérience</label>
+                    <input type="text" class="form-control" id="inputExpDate" placeholder="Date expérience...">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputExpType">Type d'expérience</label>
+                    <select name="inputExpType" id="inputExpType" class="custom-select" style="margin-right: 1rem;">
+                      <option value="null" selected>Type d'expérience</option>
+                      <option value="pro">Expérience professionnelle</option>
+                      <option value="perso">Projet personnel</option>
+                      <option value="classe">Travail en classe</option>
+                      <option value="autre">Autre</option>
+                    </select>
+    
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="inputExp">Votre expérience</label>
+                    <textarea class="form-control" id="inputExp" placeholder="Votre expérience"  rows="3" cols="50"></textarea>
+                  </div>
+                </div> 
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="inputExpLien">Lien démonstration</label>
+                    <input type="text" class="form-control" id="inputExpLien" placeholder="URL site web...">
+                  </div>
+                </div> 
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+              </fieldset>
+              </form>            
+                
+            </div>
+            
+          </div>
+        </div>
+        <div class="card-body" style="margin-left: 1rem;">
+          <div class="row">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text">Construire la maquette de l'application optimisée pour chacun des équipements ciblés, l’enchaînement et la
+                      composition des écrans, en français ou en anglais</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <p>Le 22/05/2020 travail de classe: J'ai réalisé la maquette de l'application code battle<br>
+                      Lien: http://code-battle/</p>
+                    </li>
+                    <li class="list-group-item">
+                      <p>Le 23/05/2020 travail de classe: Traduction des écrans en anglais<br>
+                      Lien: http://code-battle/</p>
+                    </li>
+                    <li class="list-group-item">
+                      <p>Le 25/05/2020 travail de classe: Mise à jour de la maquette<br>
+                      Lien: http://code-battle/</p>
+                    </li>
+                  </ul>
+                  <div class="card-body">
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Valider
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Expérience
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="list-group-item">
+                <div class="card border-success">
+                  <div class="card-body text-success">
+                    <div class="row">
+                      <p class="card-text">Connaissance du formalisme des cas d'utilisation et du diagramme d'état ou d’activité de la notation du
+                        langage de modélisation unifié UML</p>
+
+                      </div>
+                  </div>
+                  <div class="card-body">
+                    <button class="btn btn-success btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Success
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Expérience
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="list-group-item">
+                <div class="card border-success">
+                  <div class="card-body text-success">
+                    <div class="row">
+                      <p class="card-text">Connaissance des réglementations en vigueur concernant la protection des données individuelles</p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <button class="btn btn-success btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Success
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Expérience
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="card border-success">
+                  <div class="card-body text-success">
+                    <div class="row">
+                      <p class="card-text">Connaissance des langages du développement web, tels que langage de balise et feuilles de style</p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <button class="btn btn-success btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Success
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Expérience
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="list-group-item">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <p class="card-text">Utiliser un outil de gestion de version de code source</p>
+                  </div>
+                  </div>
+                  <div class="card-body">
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Valider
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Expérience
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="list-group-item">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <p class="card-text">Structurer les pages selon les recommandations du W3C pour le web et le web mobile
+                        Coder les pages web statiques et adaptables, y compris pour le web mobile, avec un langage de balise et
+                        feuilles de style, en suivant les principes de qualité et dans un style défensif en veillant à rendre l’application
+                        la plus résiliente possible</p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Valider
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm col-md-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Expérience
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="card-footer text-muted">
+          <p>
+          </p>
+        </div>
+
+      </div>
+    </div>

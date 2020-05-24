@@ -1,0 +1,85 @@
+    <div class="container">
+      <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="card-header">
+          <div class="row">
+            <h3 class="col-md-6">Profil de Fabrice Guichard</h3>
+            <ul class="nav nav-pills col-md-6">
+              <li class="nav-item">
+                <a class="nav-link active" href="/membre?userid=0&competenceid=0">profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Compétences:</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=1">1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=2">2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=3">3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=4">4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=5">5</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=6">6</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=7">7</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membre?userid=0&competenceid=8">8</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <img src="/template/tuxguitar.png" class="rounded float-left" alt="Photo profil">
+          <blockquote class="blockquote mb-0">
+            <p>J'aime le code PHP backend et les architectures MVC</p>
+          </blockquote>
+        </div>
+
+        <div class="card-body">
+          <ul class="list-group list-group-horizontal-lg">
+              <li class="list-group-item d-flex justify-content-between align-items-center">C1&nbsp;<span class="badge badge-success badge-pill">3</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C2&nbsp;<span class="badge badge-success badge-pill">5</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C3&nbsp;<span class="badge badge-success badge-pill">1</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C4&nbsp;<span class="badge badge-success badge-pill">3</span></li>
+              <li class="list-group-item active">C5</li>
+              <li class="list-group-item active">C6</li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C7&nbsp;<span class="badge badge-success badge-pill">2</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C8&nbsp;<span class="badge badge-success badge-pill">3</span></li>
+            </ul>
+            <p>&nbsp;</p>
+            <p class="lead d-flex justify-content-center align-middle">
+              <a href="/membre?userid=0&competenceid=1" class="btn btn-lg btn-success">Voir 25 compétences</a>
+            </p>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Email : <a href="mailto://fabrice1618@gmail.com">fabrice1618@gmail.com</a></li>
+        <li class="list-group-item">Github : <a href="https://github.com/fabrice1618">fabrice1618</a></li>
+        <li class="list-group-item">Visit me : <a href="http://netsim.fabricatic.fr">Network Simulator</a></li>
+      </ul>
+
+      <div class="card-footer text-muted">
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item">HTML</li>
+          <li class="list-group-item">CSS</li>
+          <li class="list-group-item">SASS</li>
+          <li class="list-group-item">JS</li>
+          <li class="list-group-item">PHP</li>
+          <li class="list-group-item">SQL</li>
+          <li class="list-group-item">GNU/Linux</li>
+          <li class="list-group-item">Docker</li>
+        </ul>
+      </div>
+
+      </div>
+    </div>

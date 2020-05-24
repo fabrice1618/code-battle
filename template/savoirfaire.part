@@ -1,0 +1,168 @@
+    <div class="container">
+      <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="card-header">
+          <h3>Compétence: DWWM - 5 Créer une base de données</h3>
+        </div>
+        
+          <div class="row" style="margin-left: 1rem;margin-top: 10px;">
+            <h4>Savoir-faire / critère de performance</h4>
+        </div>
+          
+      
+        <div class="card-body" style="margin-left: 1rem;">
+          <form>
+            <fieldset style="padding: 1rem;">
+              <button type="button" class="btn btn-outline-primary"><a href="/template/savoirfaire.html?action=ajouter">Ajouter</a></button>
+              <button type="button" class="btn btn-outline-primary"><a href="/template/savoirfaire.html?action=rechercher">Rechercher</a></button>
+            </fieldset>              
+          </form>
+          <form action="/template/savoirfaire.html?action=afteradd">
+            <fieldset class="border border-primary rounded" style="padding: 1rem;margin-bottom: 1rem;">
+            <div class="form-row">
+              <div class="form-group col-md2">
+                <label for="savoirfaireTypeSelect">Type de savoir-faire</label>
+                <select class="form-control" id="savoirfaireTypeSelect">
+                  <option selected>Savoir-faire</option>
+                  <option>Critère performance</option>
+                </select>
+              </div>
+              <div class="form-group col-md-9">
+                <label for="inputSavoirfaire">Savoir-faire</label>
+                <textarea class="form-control" id="inputSavoirfaire" placeholder="Description savoir-faire / Critère de performance"  rows="3" cols="50"></textarea>
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </fieldset>
+          </form>
+          <form action="/template/savoirfaire.html?action=aftersearch">
+            <fieldset class="border border-primary rounded" style="padding: 1rem;margin-bottom: 1rem;">
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputSavoirfaire">Savoir-faire</label>
+                <input type="text" class="form-control" id="inputSavoirfaire" placeholder="mot-clé...">
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Rechercher</button>
+          </fieldset>
+          </form>
+
+          <div class="row">
+            <h5>Critères de performance</h5>
+          </div>
+          <div class="row">
+            <p class="col-md-11">Les pages web respectent la charte graphique de l'entreprise</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=supprimer">Supprimer</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=reutiliser">Ré-utiliser</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=monter">Monter</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=descendre">Descendre</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="col-md-11">Les pages web sont conformes à l’expérience utilisateur y compris pour l’expérience mobile.</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=supprimer">Supprimer</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=reutiliser">Ré-utiliser</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=monter">Monter</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=descendre">Descendre</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="col-md-11">L'architecture de l'application répond aux bonnes pratiques de développement et de sécurisation d'application web</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=supprimer">Supprimer</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=reutiliser">Ré-utiliser</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=monter">Monter</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=descendre">Descendre</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <h5>Savoir-faire</h5>
+          </div>
+
+          <div class="row">
+            <p class="col-md-11">Écrire un algorithme</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=supprimer">Supprimer</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=reutiliser">Ré-utiliser</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=monter">Monter</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=descendre">Descendre</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="col-md-11">Intégrer dans une page web des scripts événementiels avec un langage de script client, en suivant les principes de qualité et de sécurisation des clients web</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=supprimer">Supprimer</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=reutiliser">Ré-utiliser</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=monter">Monter</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=descendre">Descendre</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="col-md-11">Programmer avec un framework de script client</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=supprimer">Supprimer</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=reutiliser">Ré-utiliser</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=monter">Monter</a>
+                <a class="dropdown-item" href="/template/savoirfaire.html?competence=1&id=1&action=descendre">Descendre</a>
+              </div>
+            </div>
+          </div>
+
+
+        <div class="card-footer text-muted">
+          <p>
+          </p>
+        </div>
+
+      </div>
+    </div>

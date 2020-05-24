@@ -1,11 +1,8 @@
 <?php 
+//require_once("../app/profilView.php");
 
-function runProfilController()
+function profilController()
 {
-    global $aProfil;
-
-    readProfilModel();
-
-    profilView();
+    viewRender("profilView");
 
 }

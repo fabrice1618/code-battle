@@ -78,104 +78,85 @@
     <div class="container">
       <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
         <div class="card-header">
-          <h3>Profil</h3>
+          <div class="row">
+            <h3 class="col-md-6">Profil de Fabrice Guichard</h3>
+            <ul class="nav nav-pills col-md-6">
+              <li class="nav-item">
+                <a class="nav-link active" href="/template/fabrice1618-profil.html">profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="/template/fabrice1618-competence.html">Compétences:</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=1">1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=2">2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=1">3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=1">4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=1">5</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=1">6</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=1">7</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/template/fabrice1618-competence.html?id=1">8</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="card-body">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputNom">Nom</label>
-                <input type="text" class="form-control" id="inputNom" placeholder="Votre nom...">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPrenom">Prénom</label>
-                <input type="text" class="form-control" id="inputPrenom" placeholder="Votre prénom...">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="inputPresentation">Présentation</label>
-                <textarea class="form-control" id="inputPresentation" placeholder="hello world\n"  rows="5" cols="50"></textarea>
-              </div>
-            </div> 
-
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="fileAvatar">Avatar</label>
-                <input type="file" class="form-control-file" id="fileAvatar">
-              </div>
-              <div class="form-group col-md-8">
-                <label for="inputSlogan">Slogan</label>
-                <input type="text" name="inputSlogan" class="form-control" id="inputSlogan" value=""  placeholder="Released under GPL">                  
-              </div>
-            </div> 
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="inputEmail">Email</label>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                  </div>
-                  <input type="text" class="form-control" id="inputEmail" placeholder="email@example.com" aria-label="Email" aria-describedby="basic-addon1">
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="inputGithub">Compte github</label>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon2">https://github.com/</span>
-                  </div>
-                  <input type="text" class="form-control" id="inputGithub" placeholder="Compte github" aria-label="Compte github" aria-describedby="basic-addon2">
-                </div>
-              </div>
-            </div>
-
-
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="inputWeb">Site web</label>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon3">https://</span>
-                  </div>
-                  <input type="text" class="form-control" id="inputWeb" placeholder="Site web" aria-label="Site web" aria-describedby="basic-addon3">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputTechno">Technologies</label>
-                <select id="inputTechno" class="form-control" multiple>
-                  <option value='html'>HTML</option>
-                  <option value='css'>CSS</option>
-                  <option value='sass'>SASS</option>
-                  <option value='js'>JS</option>
-                  <option value='php'>PHP</option>
-                  <option value='sql'>SQL</option>
-                  <option value='linux'>GNU/Linux</option>
-                </select>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputTechnoPlus">Autre technologie</label>
-                <input type="text" class="form-control" id="inputTechnoPlus" placeholder="Compléter la liste de technologies...">
-              </div>
-            </div>
-
-            <div class="form-row">
-            </div>
-
-            <button type="submit" class="btn btn-primary">Enregistrer</button>
-          </form>
+          <img src="/template/tuxguitar.png" class="rounded float-left" alt="Photo profil">
+          <blockquote class="blockquote mb-0">
+            <p>J'aime le code PHP backend et les architectures MVC</p>
+          </blockquote>
         </div>
 
-        <div class="card-footer text-muted">
-          <p>
-          </p>
-        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-horizontal-lg">
+              <li class="list-group-item d-flex justify-content-between align-items-center">C1&nbsp;<span class="badge badge-success badge-pill">3</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C2&nbsp;<span class="badge badge-success badge-pill">5</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C3&nbsp;<span class="badge badge-success badge-pill">1</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C4&nbsp;<span class="badge badge-success badge-pill">3</span></li>
+              <li class="list-group-item active">C5</li>
+              <li class="list-group-item active">C6</li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C7&nbsp;<span class="badge badge-success badge-pill">2</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">C8&nbsp;<span class="badge badge-success badge-pill">3</span></li>
+            </ul>
+            <p>&nbsp;</p>
+            <p class="lead d-flex justify-content-center align-middle">
+              <a href="/template/skills.html" class="btn btn-lg btn-success">Voir 25 compétences</a>
+            </p>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Email : <a href="mailto://fabrice1618@gmail.com">fabrice1618@gmail.com</a></li>
+        <li class="list-group-item">Github : <a href="https://github.com/fabrice1618">fabrice1618</a></li>
+        <li class="list-group-item">Visit me : <a href="http://netsim.fabricatic.fr">Network Simulator</a></li>
+      </ul>
+
+      <div class="card-footer text-muted">
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item">HTML</li>
+          <li class="list-group-item">CSS</li>
+          <li class="list-group-item">SASS</li>
+          <li class="list-group-item">JS</li>
+          <li class="list-group-item">PHP</li>
+          <li class="list-group-item">SQL</li>
+          <li class="list-group-item">GNU/Linux</li>
+          <li class="list-group-item">Docker</li>
+        </ul>
+      </div>
 
       </div>
     </div>

@@ -1,13 +1,8 @@
 <?php 
+//require_once("../app/homeView.php");
 
-
-function runHomeController()
+function homeController()
 {
-    global $aProfil;
 
-    readProfilModel();
-
-    homeView();
-
-
+    viewRender("homeView");
 }

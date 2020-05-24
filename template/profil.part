@@ -1,0 +1,104 @@
+    <div class="container">
+      <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="card-header">
+          <h3>Profil</h3>
+        </div>
+
+        <div class="card-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputNom">Nom</label>
+                <input type="text" class="form-control" id="inputNom" placeholder="Votre nom...">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPrenom">Prénom</label>
+                <input type="text" class="form-control" id="inputPrenom" placeholder="Votre prénom...">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputPresentation">Présentation</label>
+                <textarea class="form-control" id="inputPresentation" placeholder="hello world\n"  rows="5" cols="50"></textarea>
+              </div>
+            </div> 
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="fileAvatar">Avatar</label>
+                <input type="file" class="form-control-file" id="fileAvatar">
+              </div>
+              <div class="form-group col-md-8">
+                <label for="inputSlogan">Slogan</label>
+                <input type="text" name="inputSlogan" class="form-control" id="inputSlogan" value=""  placeholder="Released under GPL">                  
+              </div>
+            </div> 
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputEmail">Email</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com" aria-label="Email" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputGithub">Compte github</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2">https://github.com/</span>
+                  </div>
+                  <input type="text" class="form-control" id="inputGithub" placeholder="Compte github" aria-label="Compte github" aria-describedby="basic-addon2">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputWeb">Site web</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://</span>
+                  </div>
+                  <input type="text" class="form-control" id="inputWeb" placeholder="Site web" aria-label="Site web" aria-describedby="basic-addon3">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputTechno">Technologies</label>
+                <select id="inputTechno" class="form-control" multiple>
+                  <option value='html'>HTML</option>
+                  <option value='css'>CSS</option>
+                  <option value='sass'>SASS</option>
+                  <option value='js'>JS</option>
+                  <option value='php'>PHP</option>
+                  <option value='sql'>SQL</option>
+                  <option value='linux'>GNU/Linux</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputTechnoPlus">Autre technologie</label>
+                <input type="text" class="form-control" id="inputTechnoPlus" placeholder="Compléter la liste de technologies...">
+              </div>
+            </div>
+
+            <div class="form-row">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </form>
+        </div>
+
+        <div class="card-footer text-muted">
+          <p>
+          </p>
+        </div>
+
+      </div>
+    </div>

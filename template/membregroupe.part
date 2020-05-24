@@ -1,0 +1,71 @@
+    <div class="container">
+      <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="card-header">
+          <h3>Membres de DWWM 2019/2020</h3>
+        </div>
+        
+        <div class="card-body" style="margin-left: 1rem;">
+          <form>
+            <fieldset style="padding: 1rem;">
+              <button type="button" class="btn btn-outline-primary"><a href="/template/groupe.html?action=ajouter">Ajouter</a></button>
+            </fieldset>              
+          </form>
+          <form action="/template/membre.html?action=afteradd">
+            <fieldset class="border border-primary rounded" style="padding: 1rem;margin-bottom: 1rem;">
+              <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+              </div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </fieldset>
+          </form>
+
+          <div class="row">
+            <p class="col-md-2">toto@example.com</p>
+            <p class="col-md-9">Monsieur Toto</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/membre.html?groupe1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/membre.html?groupe=1&action=supprimer">Supprimer</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="col-md-2">tata@example.com</p>
+            <p class="col-md-9">&nbsp;</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/groupe1.html?formation=2&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/groupe1.html?formation=2&action=supprimer">Supprimer</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="col-md-2">titi@example.com</p>
+            <p class="col-md-9">Monsieur Titi</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/groupe1.html?formation=2&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/groupe1.html?formation=2&action=supprimer">Supprimer</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="card-footer text-muted">
+          <p>
+          </p>
+        </div>
+
+      </div>
+    </div>

@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>REAC</title>
+    <title>Code is fun · fabrice1618</title>
   </head>
   <body>
     <div class="container">
@@ -27,12 +27,15 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Admin
+                Extra...
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/template/utilisateur.html">Utilisateurs</a>
-                <a class="dropdown-item" href="/template/formation.html">Formations</a>
+                <a class="dropdown-item" href="/template/profil.html">Profil</a>
+                <a class="dropdown-item disabled" href="/template/profilexport.html">Exporter profil</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item disabled" href="/template/synchro.html">Synchronisation données</a>
                 <a class="dropdown-item" href="/template/competence.html">Compétences</a>
+                <a class="dropdown-item" href="/template/formation.html">Formations</a>
                 <a class="dropdown-item" href="/template/groupe.html">Groupes</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item disabled" href="/template/genac.html">Imprimer GENAC</a>
@@ -64,83 +67,76 @@
                 </form>
               </div>
             </li>
-            <li class="nav-item dropdown" style="min-width: 20rem">
-              <button class="btn btn-outline-success dropdown-toggle" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                toto@example.com
-              </button>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/template/profil.html?id=1">Mon profil</a>
-                <a class="dropdown-item" href="/template/index.html?action=logout">Se déconnecter</a>
-              </div>
-            </li>            
           </ul>
-            <blockquote class="navbar-text blockquote">
-              <p class="mb-0"><small><em>Code is fun</em></small></p>
-            </blockquote>
+          <span class="navbar-text">
+            Code is fun
+          </span>
         </div>
       </nav>
     </div>
                 
     <div class="container">
-      <div class="card-deck" style="margin-top: 1rem;">
-        <div class="card">
-          <div class="card-header">
-            <h4>DWWM 2019/2020</h4>
-          </div>  
-          <div class="card-body">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <p></p><a href="/template/fabrice1618-profil.html">toto@example.com</a></p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-                
-              </li>
-              <li class="list-group-item">
-                <p><a href="/template/fabrice1618-profil.html">titi@example.com</a></p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <p><a href="/template/fabrice1618-profil.html">tata@example.com</a></p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-              </li>
-              
-            </ul>
-          </div>
+      <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="card-header">
+          <h3>Formations</h3>
         </div>
-        <div class="card">
-          <div class="card-header">
-            <h4>TSSR 2019/2020</h4>
-          </div>  
-          <div class="card-body">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <p></p><a href="/template/fabrice1618-profil.html">toto@example.com</a></p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-                
-              </li>
-              <li class="list-group-item">
-                <p><a href="/template/fabrice1618-profil.html">titi@example.com</a></p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <p><a href="/template/fabrice1618-profil.html">tata@example.com</a></p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-              </li>
-              
-            </ul>
+        
+        <div class="card-body" style="margin-left: 1rem;">
+          <form>
+            <fieldset style="padding: 1rem;">
+              <button type="button" class="btn btn-outline-primary"><a href="/template/formation.html?action=ajouter">Ajouter</a></button>
+            </fieldset>              
+          </form>
+          <form action="/template/formation.html?action=afteradd">
+            <fieldset class="border border-primary rounded" style="padding: 1rem;margin-bottom: 1rem;">
+            <div class="form-row">
+              <div class="form-group col-md2">
+                <label for="inputFormation">Code formation</label>
+                <input type="text" class="form-control" id="inputFormation" placeholder="Code formation...">
+              </div>
+              <div class="form-group col-md-9">
+                <label for="inputFormationNom">Nom formation</label>
+                <input type="text" class="form-control" id="inputFormationNom" placeholder="Nom formation...">
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </fieldset>
+          </form>
+
+          <div class="row">
+            <h4 class="col-md-2">DWWM</h4>
+            <p class="col-md-9">Developpeur web et web mobile</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/formation.html?formation=1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/formation.html?formation=1&action=supprimer">Supprimer</a>
+              </div>
+            </div>
           </div>
+
+          <div class="row">
+            <h4 class="col-md-2">TSSR</h4>
+            <p class="col-md-9">Technicien système et réseau</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/formation.html?formation=2&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/formation.html?formation=2&action=supprimer">Supprimer</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="card-footer text-muted">
+          <p>
+          </p>
         </div>
+
       </div>
     </div>
 

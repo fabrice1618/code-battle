@@ -1,0 +1,72 @@
+    <div class="container">
+      <div class="card" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="card-header">
+          <h3>Groupes</h3>
+        </div>
+        
+        <div class="card-body" style="margin-left: 1rem;">
+          <form>
+            <fieldset style="padding: 1rem;">
+              <button type="button" class="btn btn-outline-primary"><a href="/template/groupe.html?action=ajouter">Ajouter</a></button>
+            </fieldset>              
+          </form>
+          <form action="/template/groupe.html?action=afteradd">
+            <fieldset class="border border-primary rounded" style="padding: 1rem;margin-bottom: 1rem;">
+            <div class="form-row">
+              <div class="form-group col-md3">
+                <label for="inputFormation">Code formation</label>
+                <select name="inputFormation" id="inputFormation" class="custom-select" style="margin-right: 1rem;">
+                  <option selected>Sélectionnez une formation</option>
+                  <option value="1">DWWM - Développeur web et web mobile</option>
+                  <option value="2">TSSR - Technicien système et réseau</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputGroupNom">Nom du groupe</label>
+                <input type="text" class="form-control" id="inputGroupNom" placeholder="Nom du groupe...">
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </fieldset>
+          </form>
+
+          <div class="row">
+            <h4 class="col-md-2">DWWM</h4>
+            <p class="col-md-9">DWWM 2019/2020</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/groupe.html?groupe1&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/groupe.html?groupe=1&action=supprimer">Supprimer</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/membregroupe?groupe=1">Membres</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <h4 class="col-md-2">TSSR</h4>
+            <p class="col-md-9">TSSR 2019/2020</p>
+            <div class="dropdown col-md-1">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/template/formation.html?formation=2&action=modifier">Modifier</a>
+                <a class="dropdown-item" href="/template/formation.html?formation=2&action=supprimer">Supprimer</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/membregroupe?groupe=2">Membres</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="card-footer text-muted">
+          <p>
+          </p>
+        </div>
+
+      </div>
+    </div>
