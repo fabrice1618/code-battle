@@ -1,5 +1,7 @@
 <?php 
 
+
+
 function utilisateurModelCreate( $aData )
 {
 
@@ -7,13 +9,9 @@ function utilisateurModelCreate( $aData )
 
 function utilisateurModelRead( $nId )
 {
-    return([
-        'id' => 1, 
-        'email' => 'email@example.com',
-        'hash' => '//hashpwd**',
-        'type' => 'admin',
-        'status' => "A"
-        ]);
+    global $aTableUser;
+
+    return($aTableUser[$nId]);
 }
 
 function utilisateurModelUpdate( $nId, $aData )
@@ -35,18 +33,24 @@ function utilisateurModelDelete( $nId )
 
 function utilisateurModelIndex()
 {
-    return( [   
-        [ 'userid' => 1, 'email' => 'toto@example.com', 'type' => 'admin',      'status' => "A" ],
-        [ 'userid' => 2, 'email' => 'tata@example.com', 'type' => 'admin',      'status' => "A" ],
-        [ 'userid' => 3, 'email' => 'titi@example.com', 'type' => 'admin',      'status' => "I" ],
-        [ 'userid' => 4, 'email' => 'toto@example.com', 'type' => 'formateur',  'status' => "A" ],
-        [ 'userid' => 5, 'email' => 'tata@example.com', 'type' => 'formateur',  'status' => "A" ],
-        [ 'userid' => 6, 'email' => 'titi@example.com', 'type' => 'formateur',  'status' => "I" ],
-        [ 'userid' => 7, 'email' => 'toto@example.com', 'type' => 'membre',     'status' => "A" ],
-        [ 'userid' => 8, 'email' => 'tata@example.com', 'type' => 'membre',     'status' => "A" ],
-        [ 'userid' => 9, 'email' => 'titi@example.com', 'type' => 'membre',     'status' => "I" ]
-    ]);
+    global $aTableUser;
 
+    return( $aTableUser );
+}
+
+function utilisateurModelFindEmail( $sEmail )
+{
+    global $aTableUser;
+
+    $nUserId = 0;
+
+    foreach ($aTableUser as $key => $aUser) {
+        if ($aUser['email']==$sEmail) {
+            $nUserId = $key;
+        }
+    }
+
+    return($nUserId);
 }
 
 function utilisateurModelGroupeUpdate( $nId, $aGroupes ) 

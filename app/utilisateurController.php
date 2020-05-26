@@ -3,12 +3,12 @@ require_once("../app/utilisateurModel.php");
 
     /* Actions de ce controller
     index (par défaut)
-    ajouter             display:+fieldset ajouter, -bouton ajouter
+    addform             display:+fieldset ajouter, -bouton ajouter
     add                 database:insert utilisateur
                         post: token, inputUtilEmail, inputUtilType
-    groupe              display:+fieldset groupe
+    groupeform          display:+fieldset groupe
                         get:userid
-    modifgroupe         database:modif des affectations
+    groupe              database:modif des affectations
                         post: token, inputUtilEmail, inputUtilGroupe array des valeurs selectionnées
     supprimer           database:delete utilisateur
                         get: userid, token
@@ -36,72 +36,59 @@ function utilisateurController()
     appRequestParamSetdefault( 'inputUtilGroupe', 'post', [] );
 
     // Suivant l'action faire quelque chose, puis afficher la liste
-    switch ( appRequestParam('action') ) {
-        case 'index':
-        case 'ajouter':
-        case 'groupe':
-            break;
-
-        case 'add':
-            if ( isAuthToken() ) {
+    if ( isAuthToken() ) {
+        switch ( appRequestParam('action') ) {
+            case 'index':
+            case 'addform':
+            case 'groupeform':
+                break;
+    
+            case 'add':
                 utilisateurModelCreate( [ 
                     'id' => 0, 
                     'email' => appRequestParam('inputUtilEmail'),
                     'type' => appRequestParam('inputUtilType'),
                     'status' => "A"        
                     ] );
-            }
-            break;
-    
-        case 'modifgroupe':
-            if ( isAuthToken() ) {
+                break;
+        
+            case 'groupe':
                 utilisateurModelGroupeUpdate( appRequestParam('userid'), appRequestParam('inputUtilGroupe') );
-            }
-            break;
-    
-        case 'supprimer':
-            if ( isAuthToken() ) {
+                break;
+        
+            case 'supprimer':
                 utilisateurModelDelete( appRequestParam('userid') );
-            }
-            break;
-
-        case 'toformateur':
-            if ( isAuthToken() ) {
+                break;
+    
+            case 'toformateur':
                 utilisateurModelUpdateField( appRequestParam('userid'), 'type', 'formateur' );
-            }
-            break;
-        
-        case 'toadmin':
-            if ( isAuthToken() ) {
+                break;
+            
+            case 'toadmin':
                 utilisateurModelUpdateField( appRequestParam('userid'), 'type', 'admin' );
-            }
-            break;
-        
-        case 'desactive':
-            if ( isAuthToken() ) {
+                break;
+            
+            case 'desactive':
                 utilisateurModelUpdateField( appRequestParam('userid'), 'status', 'I' );
-            }
-            break;
-
-        case 'active':
-            if ( isAuthToken() ) {
+                break;
+    
+            case 'active':
                 utilisateurModelUpdateField( appRequestParam('userid'), 'status', 'A' );
-            }
-            break;
-
-        case 'newpwd':
-            if ( isAuthToken() ) {
+                break;
+    
+            case 'newpwd':
                 $aPwd = authGetNewPassword();
                 utilisateurModelUpdateField( appRequestParam('userid'), 'hash', $aPwd['hash'] );
-            }
-            break;
+                break;
+        }
     }
 
     // Suivant l'action faire quelque chose, puis afficher la liste
-    appSetData( 'token', authNewToken() );  // generer un nouveau token
+    authNewToken();  // generer un nouveau token
 
     // Recuperer les données à afficher
     $aUserList = utilisateurModelIndex();
+
     foreach ($aUserList as $key => $aUser) {
         $sDescription = "";
         if ($aUser['type'] == 'formateur') {

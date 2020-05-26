@@ -89,3 +89,15 @@ function appGetData( $sParamName )
     }
 
 }
+
+function appGetUser( $sParamName )
+{
+    global $aApp;
+
+    if (isset($aApp['user'][$sParamName])) {
+        return($aApp['user'][$sParamName]);
+    } else {
+        return(null);
+    }
+
+}

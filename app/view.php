@@ -62,7 +62,7 @@ function viewNavbar()
             </li>
             ');
 
-    if ( isAuth('admin')) {
+    if ( appGetUser('type')=='admin' ) {
         viewMenuAdmin();
     }
     
@@ -93,8 +93,8 @@ function viewMenuLogin()
       Connexion
     </button>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <form action="/index?action=checklogin" method="post" class="px-4 py-3">
-        <input type="hidden" name="loginToken" value="0123456789abcdef">
+      <form action="/home?action=login" method="post" class="px-4 py-3">
+        <input type="hidden" name="token" value="0123456789abcdef">
         <div class="form-group">
           <label for="exampleDropdownFormEmail1">Email</label>
           <input type="email" name="loginEmail" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
@@ -124,13 +124,13 @@ function viewMenuProfil()
 
     echo('
     <li class="nav-item dropdown" style="min-width: 20rem">
-    <button class="btn btn-outline-success dropdown-toggle" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      toto@example.com
-    </button>
+    <button class="btn btn-outline-success dropdown-toggle" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.
+      appGetUser('email') .
+    '</button>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
     ');    
 
-    if ( isAuth('membre')) {
+    if ( appGetUser('type')=='membre' ) {
         echo('
         <a class="dropdown-item" href="/profil?userid=1">Mon profil</a>
         ');    

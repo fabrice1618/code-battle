@@ -11,16 +11,16 @@ function utilisateurView()
   // Bouton ajouter
   if ( in_array( 
         appRequestParam('action'), 
-        ['index', 'add', 'modifgroupe', 'supprimer', 'toformateur', 'toadmin', 'desactive', 'newpwd'] 
+        ['index', 'add', 'groupe', 'supprimer', 'toformateur', 'toadmin', 'active', 'desactive', 'newpwd'] 
       ) ) {
     $sMainContent .= utilisateurViewBoutonajouter();
   }
-  // Formulaire ajouter
-  if ( appRequestParam('action') === 'ajouter' ) {
+  // Formulaire addform
+  if ( appRequestParam('action') === 'addform' ) {
     $sMainContent .= utilisateurViewFormajouter();
   }
   // Formulaire modification groupe
-  if ( appRequestParam('action') === 'groupe' ) {
+  if ( appRequestParam('action') === 'groupeform' ) {
     $sMainContent .= utilisateurViewFormgroupe();
   }
   $sMainContent .= utilisateurViewCardbobyEnd();
@@ -51,7 +51,7 @@ function utilisateurViewCardbobyEnd()
 
 function utilisateurViewBoutonajouter()
 {
-  $sURL = routerMakeURL('utilisateur', ['action'=>'ajouter']);
+  $sURL = routerMakeURL('utilisateur', ['action'=>'addform']);
 
   return('  <form>
               <fieldset style="padding: 1rem;">
@@ -98,7 +98,7 @@ function utilisateurViewFormajouter()
 
 function utilisateurViewFormgroupe()
 {
-  $sURL = routerMakeURL('utilisateur', ['action'=>'modifgroupe']);
+  $sURL = routerMakeURL('utilisateur', ['action'=>'groupe']);
 
   return('  
   <form action="'.$sURL.'" method="post">
@@ -168,18 +168,7 @@ function utilisateurViewUser($aUser)
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
 
-  switch ($aUser['type']) {
-    case 'admin':
-      $sReturn .= utilisateurViewUserMenuAdmin( $aUser['userid'], $aUser['status'], appGetData('token') );
-      break;
-    case 'formateur':
-      $sReturn .= utilisateurViewUserMenuFormateur( $aUser['userid'], $aUser['status'], appGetData('token') );
-      break;
-    case 'membre':
-      $sReturn .= utilisateurViewUserMenuMembre( $aUser['userid'], $aUser['status'], appGetData('token') );
-      break;
-  }
-
+  $sReturn .= utilisateurViewUserMenu( $aUser['userid'], $aUser['type'], $aUser['status'], appGetData('token') );
   $sReturn .= '</div>
             </div>
           </div>';
@@ -187,127 +176,65 @@ function utilisateurViewUser($aUser)
   return($sReturn);
 }
 
-function utilisateurViewUserMenuAdmin( $sUserId, $sUserStatus, $sToken )
+function utilisateurViewUserMenu( $sUserId, $sUserType, $sUserStatus, $sToken )
 {
+  $sReturn = "";
+
+  if ($sUserType=='formateur') {
+    $sReturn .= utilisateurViewUserMenuItem( 
+      'utilisateur', 
+      [ 'action' => 'groupeform', 'userid' => $sUserId ], 
+      'Modifier groupes'
+    );
+  }
+
+  if ( in_array($sUserType, ['formateur','admin']) ) {
+    $sReturn .= utilisateurViewUserMenuItem( 
+      'utilisateur', 
+      [ 'action' => 'supprimer', 'userid' => $sUserId, 'token' => $sToken ], 
+      'Supprimer'
+      );
+
+    $sReturn .= '<div class="dropdown-divider"></div>';
+  }
+
+  if ($sUserType=='formateur') {
+    $sReturn .= utilisateurViewUserMenuItem( 
+      'utilisateur', 
+      [ 'action' => 'toadmin', 'userid' => $sUserId, 'token' => $sToken ], 
+      'Changer type en admin'
+      );
+  }
+
+  if ($sUserType=='admin') {
+    $sReturn .= utilisateurViewUserMenuItem( 
+      'utilisateur', 
+      [ 'action' => 'toformateur', 'userid' => $sUserId, 'token' => $sToken ], 
+      'Changer type en formateur'
+      );
+  }
+
   if ($sUserStatus=="A") {
-    $sUserMenuActive = utilisateurViewUserMenuItem( 
+    $sReturn .= utilisateurViewUserMenuItem( 
       'utilisateur', 
       [ 'action' => 'desactive', 'userid' => $sUserId, 'token' => $sToken ], 
       'Désactiver'
     );
   } else {
-    $sUserMenuActive = utilisateurViewUserMenuItem( 
+    $sReturn .= utilisateurViewUserMenuItem( 
       'utilisateur', 
       [ 'action' => 'active', 'userid' => $sUserId, 'token' => $sToken ], 
       'Activer'
     );
   }
 
-  $sUserMenu1 = utilisateurViewUserMenuItem( 
-    'utilisateur', 
-    [ 'action' => 'supprimer', 'userid' => $sUserId, 'token' => $sToken ], 
-    'Supprimer'
-  );
-
-  $sUserMenu2 = utilisateurViewUserMenuItem( 
-    'utilisateur', 
-    [ 'action' => 'toformateur', 'userid' => $sUserId, 'token' => $sToken ], 
-    'Changer type en formateur'
-  );
-
-  $sUserMenu3 = utilisateurViewUserMenuItem( 
+  $sReturn .= utilisateurViewUserMenuItem( 
     'utilisateur', 
     [ 'action' => 'newpwd', 'userid' => $sUserId, 'token' => $sToken ], 
     'Nouveau mot de passe'
   );
 
-  $sMenu = 
-    $sUserMenu1 . PHP_EOL .
-    '<div class="dropdown-divider"></div>'. PHP_EOL .
-    $sUserMenu2 . PHP_EOL .
-    $sUserMenuActive . PHP_EOL .
-    $sUserMenu3;
-
-  return($sMenu);
-}
-
-
-function utilisateurViewUserMenuFormateur( $sUserId, $sUserStatus, $sToken )
-{
-  if ($sUserStatus=="A") {
-    $sUserMenuActive = utilisateurViewUserMenuItem( 
-      'utilisateur', 
-      [ 'action' => 'desactive', 'userid' => $sUserId, 'token' => $sToken ], 
-      'Désactiver'
-    );
-  } else {
-    $sUserMenuActive = utilisateurViewUserMenuItem( 
-      'utilisateur', 
-      [ 'action' => 'active', 'userid' => $sUserId, 'token' => $sToken ], 
-      'Activer'
-    );
-  }
-
-  $sUserMenuGroupe = utilisateurViewUserMenuItem( 
-    'utilisateur', 
-    [ 'action' => 'groupe', 'userid' => $sUserId ], 
-    'Modifier groupes'
-  );
-
-  $sUserMenu1 = utilisateurViewUserMenuItem( 
-    'utilisateur', 
-    [ 'action' => 'supprimer', 'userid' => $sUserId, 'token' => $sToken ], 
-    'Supprimer'
-  );
-
-  $sUserMenu2 = utilisateurViewUserMenuItem( 
-    'utilisateur', 
-    [ 'action' => 'toadmin', 'userid' => $sUserId, 'token' => $sToken ], 
-    'Changer type en admin'
-  );
-
-  $sUserMenu3 = utilisateurViewUserMenuItem( 
-    'utilisateur', 
-    [ 'action' => 'newpwd', 'userid' => $sUserId, 'token' => $sToken ], 
-    'Nouveau mot de passe'
-  );
-
-  $sMenu = 
-    $sUserMenuGroupe . PHP_EOL .
-    $sUserMenu1 . PHP_EOL .
-    '<div class="dropdown-divider"></div>'. PHP_EOL .
-    $sUserMenu2 . PHP_EOL .
-    $sUserMenuActive . PHP_EOL .
-    $sUserMenu3;
-
-  return($sMenu);
-}
-
-function utilisateurViewUserMenuMembre( $sUserId, $sUserStatus, $sToken )
-{
-  if ($sUserStatus=="A") {
-    $sUserMenuActive = utilisateurViewUserMenuItem( 
-      'utilisateur', 
-      [ 'action' => 'desactive', 'userid' => $sUserId, 'token' => $sToken ], 
-      'Désactiver'
-    );
-  } else {
-    $sUserMenuActive = utilisateurViewUserMenuItem( 
-      'utilisateur', 
-      [ 'action' => 'active', 'userid' => $sUserId, 'token' => $sToken ], 
-      'Activer'
-    );
-  }
-
-  $sUserMenu3 = utilisateurViewUserMenuItem( 
-    'utilisateur', 
-    [ 'action' => 'newpwd', 'userid' => $sUserId, 'token' => $sToken ], 
-    'Nouveau mot de passe'
-  );
-
-  $sMenu = $sUserMenuActive . PHP_EOL . $sUserMenu3;
-
-  return($sMenu);
+  return($sReturn);
 }
 
 function utilisateurViewUserMenuItem( $sController, $aParam, $sDescURL )
