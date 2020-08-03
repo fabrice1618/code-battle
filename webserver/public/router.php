@@ -1,4 +1,8 @@
 <?php
+
+echo "Hello world";
+exit(0);
+
 require_once("../app/auth.php");
 require_once("../app/view.php");
 require_once("../app/app.php");
@@ -66,6 +70,7 @@ if ( isset($_SESSION['userid']) && $_SESSION['userid']!=0 ) {
 // Executer le controller
 appGetData('controller')();
 
+// Ecrire la session sur disque
 session_write_close();
 
 /// Fin du programme principal

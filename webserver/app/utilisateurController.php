@@ -36,7 +36,7 @@ function utilisateurController()
     appRequestParamSetdefault( 'inputUtilGroupe', 'post', [] );
 
     // Suivant l'action faire quelque chose, puis afficher la liste
-    if ( isAuthToken() ) {
+    if ( isAuthToken() ) {                          // Faille CSRF
         switch ( appRequestParam('action') ) {
             case 'index':
             case 'addform':

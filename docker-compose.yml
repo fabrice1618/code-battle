@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    image: php:8.0-rc-apache
+    container_name: parcours_php
+    volumes:
+      - ./html/:/var/www/html/
+    ports:
+      - "8000:80"
